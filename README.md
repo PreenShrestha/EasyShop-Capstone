@@ -14,7 +14,7 @@
 
 ##### Cloning the Repository:
 
-git clone https://github.com/PreenShrestha/EasyShop-Capstone
+- git clone https://github.com/PreenShrestha/EasyShop-Capstone
 
 
 
@@ -45,19 +45,18 @@ datasource.password=<Your Password>
 cd \C\pluralsight\EasyShop
 ```
 
-
 #### Run the Spring Boot application
 ```
 ./mvnw spring-boot:run
 ```
 #### Run the frontend
 - Navigate to capstone-web-application
-- navigate to index.html
-- click on browser icon to run the front end
+- Navigate to index.html
+- Click on browser icon to run the front end
 
 #### Postman setup
-- Click on file and click on import and select the postman colllections
-- click on easyshop and set the environment variables for {{baseurl}}, {{usertoken}}, {{admintoken}} and {{newCategoryId}}.
+- Import the Postman collection included in the repository.
+- Set up environment variables for {{baseurl}}, {{usertoken}}, {{admintoken}}, and {{newCategoryId}}.
 ```
 {{baseurl}} -> http://localhost:8080
 {{usertoken}} -> <you will get once register api is called>
@@ -65,23 +64,20 @@ cd \C\pluralsight\EasyShop
 {{newCategoryId}} -> 4
 ```
 
-
-
 ##### Features
 - User registration and login.
 - Product display by category.
 - Product search and filtering.
-- Adding , deleting and updating category
-- Adding , updating and deleting Product
-- Getting Profile
-- Updating Profile
+- Category management (Add, delete, and update).
+- Product management (Add, update, and delete).
+- User profile retrieval and update.
 
 
 
 ##### Bug Fixes
-- Search/filter functionality bug.
-- Product duplication issue.
-- Testing
+- Fixed search/filter functionality.
+- Resolved product duplication issue.
+- General testing improvements.
 
 
 We heavily rely on Postman for testing our API endpoints. The repository includes a collection of Postman scripts for various API functionalities.
@@ -115,18 +111,17 @@ This project is part of a capstone solo project. Contributions are not currently
 
 
 ##### Snapshot of web application
-<img src="https://github.com/Shankarmagar/EasyShop/blob/main/screenshots/Screenshot%202024-01-05%20at%201.27.07%E2%80%AFAM.png" width= 500px height= 500px>
+<img src="https://github.com/PreenShrestha/EasyShop-Capstone/blob/main/Snapshots/Screenshot_2024-01-05_at_1.27.40_AM.png" width= 500px height= 500px>
 
 ##### Snapshot of Testing in Postman
 - Phase 1 and 2
-  <img src= "https://github.com/Shankarmagar/EasyShop/blob/main/screenshots/Screenshot%202024-01-05%20at%201.32.18%E2%80%AFAM.png" width= 500px height= 500px>
+  <img src= "https://github.com/PreenShrestha/EasyShop-Capstone/blob/main/Snapshots/Screenshot_2024-01-05_at_1.32.18_AM.png" width= 500px height= 500px>
 
-
-
-
+  
 
 ### Interesting Code Snippet
 
 ```
 @PreAuthorize("hasRole('ROLE_ADMIN')")
+This annotation restricts access to the annotated method to users with the 'ROLE_ADMIN' role.
 ```
