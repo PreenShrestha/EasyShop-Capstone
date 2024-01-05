@@ -45,15 +45,12 @@ public class CategoriesController
 
     // add the appropriate annotation for a get action
     @GetMapping("/{id}")
-    public Category getById(@PathVariable int id, HttpServletResponse response)
-    {
+    public Category getById(@PathVariable int id, HttpServletResponse response) {
         // get the category by id
         Category dummy = categoryDao.getById(id);
-        if(dummy == null)
-        {
+        if (dummy == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-        }
-        else{
+        } else {
             response.setStatus(HttpServletResponse.SC_OK);
         }
         return dummy;
